@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97fcd4b2eee0c04d845da8ab7966c5e, type: 3}
+  m_Name: 0LegalJobs
+  m_EditorClassIdentifier: Assembly-CSharp::JobList
+  jobs:
+  - {fileID: 11400000, guid: 33b60b4645e6f4f4cb7b177c0a8ebe60, type: 2}
+  - {fileID: 11400000, guid: d30f62b5d28faa54c8202f7aa832812d, type: 2}
+  - {fileID: 11400000, guid: 9f7cff65caaabd446996ce56182ba53f, type: 2}
+  - {fileID: 11400000, guid: d9e6500273d051a4daa3a481fbbf5af5, type: 2}
+  - {fileID: 11400000, guid: d99c51b299368844fbd827a3a175c524, type: 2}
+  - {fileID: 11400000, guid: 1cc8e8a225f558e448f8722c5b11574d, type: 2}
+  - {fileID: 11400000, guid: fd0a571f73421ca40b6c7b3f835afe10, type: 2}
+  - {fileID: 11400000, guid: 90ff05951e6508f4d8822b63e7d5d851, type: 2}
+  - {fileID: 11400000, guid: 9eaf9dccc333c2b4aafa2f02f17addfa, type: 2}
+  - {fileID: 11400000, guid: 235c3342df4ed6848aa453f2d9dd9270, type: 2}
