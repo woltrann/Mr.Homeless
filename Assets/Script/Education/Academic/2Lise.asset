@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: a2
   itemName: Liseyi Bitir
-  itemIcon: {fileID: 0}
-  price: 0
+  itemIcon: {fileID: 21300000, guid: 08c74d772cde4884db65a5413037559d, type: 3}
+  price: 2000
   statType: 3
-  statAmount: 0
+  statAmount: 25

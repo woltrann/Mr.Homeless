@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 460321700be67434ca432b131f20f4ae, type: 3}
-  m_Name: 2KacakSigaraSat 1
+  m_Name: 2YanKesicilikYap
   m_EditorClassIdentifier: Assembly-CSharp::JobData
-  jobName: 
+  jobName: Yankesicilik Yap
   requiredHunger: 0
   requiredEnergy: 0
   rewardMoney: 0
+  requiredItemIDs: []
+  passesTime: 1

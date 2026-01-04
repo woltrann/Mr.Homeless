@@ -10,4 +10,6 @@ public class JobData : ScriptableObject
     public int rewardMoney;
     //public int rewardFame; // istersen kullanýrsýn
     public List<string> requiredItemIDs;
+
+    public bool passesTime;
 }

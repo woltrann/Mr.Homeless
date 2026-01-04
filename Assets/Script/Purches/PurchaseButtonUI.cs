@@ -52,7 +52,7 @@ public class PurchaseButtonUI : MonoBehaviour
             ItemStatType.MaxEnergy => $"+{data.statAmount} Max Enerji",
             ItemStatType.MaxHunger => $"+{data.statAmount} Max Açlýk",
             ItemStatType.Power => $"+{data.statAmount} Güç",
-            ItemStatType.Intellegent => $"+{data.statAmount} Ün",
+            ItemStatType.Intellegent => $"+{data.statAmount} Zeka",
             _ => ""
         };
     }

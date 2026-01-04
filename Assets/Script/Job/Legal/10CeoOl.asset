@@ -16,3 +16,5 @@ MonoBehaviour:
   requiredHunger: -100
   requiredEnergy: -100
   rewardMoney: 25000
+  requiredItemIDs: []
+  passesTime: 1

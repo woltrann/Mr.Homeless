@@ -250,6 +250,9 @@ public class ButonKontrolu : MonoBehaviour
                                   false, false, false, false, false, false, false, false, false, false };
     public bool[] mulkAlindiMi ={false,false,false,false,false,false,};
     public Text[] TutulduMu;
+
+
+
     public List<int> deste = new List<int>();
     Dictionary<int, int> kartDegerleri = new Dictionary<int, int>() {
     // Karo kartlarý
@@ -265,12 +268,20 @@ public class ButonKontrolu : MonoBehaviour
     {40, 11}, {41, 2}, {42, 3}, {43, 4}, {44, 5}, {45, 6}, {46, 7}, {47, 8}, {48, 9}, {49, 10}, // 40: As, 41-49: Sayýlar, 50: Vale, 51: Kýz, 52: Papaz
     {50, 10}, {51, 10}, {52, 10} };
     public Sprite[] kartGorselleri;
-    public Sprite[] zarGorselleri;
 
+
+
+    public Sprite[] zarGorselleri;
     private int dice1Result; // Birinci zar sonucu
     private int dice2Result; // Ýkinci zar sonucu
     public Image dice1Image; // Birinci zarýn görselini gösterecek UI Image
     public Image dice2Image; // Ýkinci zarýn görselini gösterecek UI Image
+
+
+
+
+
+
 
     private string adUnitId = "ca-app-pub-2969178840845794/9086371383";
     private string adUnitIdBanner = "ca-app-pub-2969178840845794/9880276988";
@@ -279,6 +290,7 @@ public class ButonKontrolu : MonoBehaviour
     private BannerView bannerReklam;
     private RewardedAd odulluReklam;
 
+    #region Kod
     void Start()
     {
         MobileAds.Initialize((InitializationStatus initStatus) =>{});
@@ -1299,7 +1311,9 @@ public class ButonKontrolu : MonoBehaviour
         enerjiBar2.fillAmount = fillValue;
         enerjiBar2.color = Color.Lerp(enerjiColorEnd, enerjiColorStart, fillValue);
     }
+    #endregion
 
+    #region Rulet
     public void RuletBahisYap()
     {
         int.TryParse(BahisGir.text, out bahisGir);
@@ -1588,6 +1602,9 @@ public class ButonKontrolu : MonoBehaviour
         }
 
     }
+    #endregion
+
+    #region Black Jack
     public void BJOyna()
     {
         reklamSayaci++;
@@ -1872,6 +1889,9 @@ public class ButonKontrolu : MonoBehaviour
         hitCount = 0;
         kart3= 0;
     }
+    #endregion
+
+    #region Zar Oyunu
     public void BarbutOyna()
     {
         reklamSayaci++;
@@ -1953,6 +1973,9 @@ public class ButonKontrolu : MonoBehaviour
         }
         ParaGuncelle();
     }
+    #endregion
+
+    #region Tefeci
     public void TefeciButon()
     {
         int.TryParse(Tefeci.text, out tefeci);
@@ -2065,7 +2088,9 @@ public class ButonKontrolu : MonoBehaviour
             TefeciBildirim.text = "Bu kadarý yetmez. Borçlarýn bu kadar küçük deðil. Bir dahaki sefere tam getir, yoksa bu son görüþmemiz olmaz.";
         }
     }
+    #endregion
 
+    #region save-load-ads
     public void BaslaButonunaBasildi()
     {
         OyunuYukle();
@@ -2316,5 +2341,8 @@ public class ButonKontrolu : MonoBehaviour
         }
         
     }
+
+    #endregion
+
 }
 

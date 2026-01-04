@@ -136,6 +136,26 @@ public class PanelManager : MonoBehaviour
     public void AcademicPanel() => otherPanel[7].SetActive(!otherPanel[7].activeSelf);
     public void KriminalPanel() => otherPanel[8].SetActive(!otherPanel[8].activeSelf);
     public void SpecialPanel() => otherPanel[9].SetActive(!otherPanel[9].activeSelf);
+    public void CasinoPanel() => otherPanel[10].SetActive(!otherPanel[10].activeSelf);
+    public void TefeciPanel()
+    {
+        otherPanel[11].SetActive(!otherPanel[11].activeSelf);
+        if (Casino.instance.TefecidenAldýMi)
+        {
+            Casino.instance.TefeciBildirim.text = "Sanýrým borcun var. Geri ödeme günü yaklaþýyor.";
+        }
+        else
+        {
+            Casino.instance.TefeciBildirim.text = "Demek paraya ihtiyacýn var? Burada kimse bedavaya yaþamaz. Faizler acýtýr, ama seni ayaða kaldýrýrým. Hazýr mýsýn?";
+        }
+    }
+    public void RuletPanel() => otherPanel[12].SetActive(!otherPanel[12].activeSelf);
+    public void BJPanel() => otherPanel[13].SetActive(!otherPanel[13].activeSelf);
+    public void DicePanel() => otherPanel[14].SetActive(!otherPanel[14].activeSelf);
+    public void RuletInfoPanelOpen() => otherPanel[15].SetActive(!otherPanel[15].activeSelf);
+    public void BJInfoPanelOpen() => otherPanel[16].SetActive(!otherPanel[16].activeSelf);
+    public void BarbutInfoPanelOpen() => otherPanel[17].SetActive(!otherPanel[17].activeSelf);
+    public void MulkPanel() => otherPanel[18].SetActive(!otherPanel[18].activeSelf);
 
 
 }

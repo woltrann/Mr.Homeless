@@ -18,3 +18,4 @@ MonoBehaviour:
   rewardMoney: 3
   requiredItemIDs:
   - Bot
+  passesTime: 1

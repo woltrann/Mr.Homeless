@@ -28,6 +28,10 @@ public class JobButtonUI : MonoBehaviour
     private void OnClick()
     {
         jobManager.TryDoJob(jobData);
-        CharacterStats.Instance.Time();
+
+        if (jobData.passesTime)
+        {
+            CharacterStats.Instance.Time();
+        }
     }
 }

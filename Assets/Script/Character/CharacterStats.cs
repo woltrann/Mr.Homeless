@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterStats : MonoBehaviour
 {
@@ -50,6 +51,7 @@ public class CharacterStats : MonoBehaviour
         PlayerPrefs.SetInt("DAY", day);
         PlayerPrefs.SetInt("YEAR", year);
         timeText.text = $"Gün: {day} \nYaþ: {year}";
+        Casino.instance.GunIlerle();
     }
     #region Stats
     public void AddMoney(int amount)    // ----- MONEY -----
@@ -127,6 +129,11 @@ public class CharacterStats : MonoBehaviour
         maxEnergy = PlayerPrefs.GetInt("MAX_ENERGY", maxEnergy);
         day = PlayerPrefs.GetInt("DAY", day);
         year = PlayerPrefs.GetInt("YEAR", year);
+    }
+    public void ResetStats()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     #endregion
 }
