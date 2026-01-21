@@ -8,7 +8,8 @@ public class JobData : ScriptableObject
     public int requiredHunger;
     public int requiredEnergy;
     public int rewardMoney;
-    //public int rewardFame; // istersen kullanýrsýn
+    public int requiredPower;
+    public int requiredIntellegent;
     public List<string> requiredItemIDs;
 
     public bool passesTime;

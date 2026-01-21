@@ -15,6 +15,6 @@ MonoBehaviour:
   itemID: k2
   itemName: "H\u0131rs\u0131zl\u0131\u011F\u0131 \xD6\u011Fren"
   itemIcon: {fileID: 0}
-  price: 0
+  price: 2500
   statType: 2
-  statAmount: 0
+  statAmount: 15

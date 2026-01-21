@@ -15,6 +15,6 @@ MonoBehaviour:
   itemID: a4
   itemName: "Hukuk \xD6\u011Fren"
   itemIcon: {fileID: 0}
-  price: 0
-  statType: 3
-  statAmount: 0
+  price: 500000
+  statType: 4
+  statAmount: 3

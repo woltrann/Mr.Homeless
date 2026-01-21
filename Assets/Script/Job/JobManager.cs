@@ -17,6 +17,12 @@ public class JobManager : MonoBehaviour
         if (stats.hunger < -job.requiredHunger)
             missingItems.Add("Yetersiz Açlýk");
 
+        if(stats.power < job.requiredPower)
+            missingItems.Add("Yetersiz Güç (" + job.requiredPower + ")");
+
+        if (stats.intellegent < -job.requiredIntellegent)
+            missingItems.Add("Yetersiz Zeka (" + job.requiredIntellegent + ")");
+
         foreach (var itemID in job.requiredItemIDs)        // Item gereksinimleri
         {
             if (!purchaseManager.HasItem(itemID))

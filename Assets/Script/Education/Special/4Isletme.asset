@@ -15,6 +15,6 @@ MonoBehaviour:
   itemID: s5
   itemName: "\u0130\u015Fletme Belgesi Al"
   itemIcon: {fileID: 0}
-  price: 0
-  statType: 3
-  statAmount: 0
+  price: 100000
+  statType: 4
+  statAmount: 3

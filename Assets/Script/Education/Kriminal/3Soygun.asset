@@ -15,6 +15,6 @@ MonoBehaviour:
   itemID: k3
   itemName: "Spygun Yapmay\u0131 \xD6\u011Fren"
   itemIcon: {fileID: 0}
-  price: 0
+  price: 10000
   statType: 2
-  statAmount: 0
+  statAmount: 50

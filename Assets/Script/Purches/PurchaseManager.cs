@@ -45,11 +45,14 @@ public class PurchaseManager : MonoBehaviour
                 break;
 
             case ItemStatType.Power:
-                stats.power += item.statAmount;
+                stats.IncreasePower(item.statAmount);
                 break;
 
             case ItemStatType.Intellegent:
-                stats.intellegent += item.statAmount;
+                stats.IncreaseIntellegent(item.statAmount);
+                break;
+            case ItemStatType.MoneyBonus:
+                stats.IncreaseMoneyX(item.statAmount);
                 break;
         }
 

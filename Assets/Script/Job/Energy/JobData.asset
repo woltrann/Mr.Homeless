@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 460321700be67434ca432b131f20f4ae, type: 3}
-  m_Name: 6TaksiyeCik
+  m_Name: JobData
   m_EditorClassIdentifier: Assembly-CSharp::JobData
-  jobName: "Taksiye \xC7\u0131k"
-  requiredHunger: -20
-  requiredEnergy: -20
-  rewardMoney: 150
-  requiredPower: 0
-  requiredIntellegent: 50
+  jobName: 
+  requiredHunger: 0
+  requiredEnergy: 0
+  rewardMoney: 0
   requiredItemIDs: []
-  passesTime: 1
+  passesTime: 0

@@ -15,6 +15,6 @@ MonoBehaviour:
   itemID: s1
   itemName: "Ehliyet S\u0131nav\u0131na Gir"
   itemIcon: {fileID: 0}
-  price: 0
-  statType: 3
-  statAmount: 0
+  price: 1500
+  statType: 4
+  statAmount: 1

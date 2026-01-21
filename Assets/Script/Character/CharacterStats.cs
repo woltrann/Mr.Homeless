@@ -14,6 +14,7 @@ public class CharacterStats : MonoBehaviour
     public int maxEnergy = 100;
     public int power;
     public int intellegent;
+    public float moneyX=1;
 
     [Header("UI - TMP")]
     public TMP_Text moneyText;
@@ -52,10 +53,12 @@ public class CharacterStats : MonoBehaviour
         PlayerPrefs.SetInt("YEAR", year);
         timeText.text = $"Gün: {day} \nYaþ: {year}";
         Casino.instance.GunIlerle();
+        Casino.instance.HasilatGunuGecti();
     }
     #region Stats
     public void AddMoney(int amount)    // ----- MONEY -----
     {
+        amount += ((int)(amount * (moneyX / 10)));
         money += amount;
         SaveStats();
         UpdateUI();
@@ -98,6 +101,23 @@ public class CharacterStats : MonoBehaviour
         SaveStats();
         UpdateUI();
     }
+    public void IncreasePower(int amount)
+    {
+        power += amount;
+        SaveStats();
+        UpdateUI();
+    }
+    public void IncreaseIntellegent(int amount)
+    {
+        intellegent += amount;
+        SaveStats();
+        UpdateUI();
+    }
+    public void IncreaseMoneyX(int amount)
+    {
+        moneyX += amount;
+        SaveStats();
+    }
     #endregion
     #region UI-Save-Load
     public void UpdateUI()    // ----- UI UPDATE -----
@@ -117,6 +137,9 @@ public class CharacterStats : MonoBehaviour
         PlayerPrefs.SetInt("ENERGY", energy);
         PlayerPrefs.SetInt("MAX_HUNGER", maxHunger);
         PlayerPrefs.SetInt("MAX_ENERGY", maxEnergy);
+        PlayerPrefs.SetInt("POWER", power);
+        PlayerPrefs.SetInt("INTELLEGENT", intellegent);
+        PlayerPrefs.SetFloat("MONEYX", moneyX);
         PlayerPrefs.Save();
     }
 
@@ -127,6 +150,9 @@ public class CharacterStats : MonoBehaviour
         energy = PlayerPrefs.GetInt("ENERGY", energy);
         maxHunger = PlayerPrefs.GetInt("MAX_HUNGER", maxHunger);
         maxEnergy = PlayerPrefs.GetInt("MAX_ENERGY", maxEnergy);
+        power = PlayerPrefs.GetInt("POWER", power);
+        intellegent = PlayerPrefs.GetInt("INTELLEGENT", intellegent);
+        moneyX = PlayerPrefs.GetFloat("MONEYX", moneyX);
         day = PlayerPrefs.GetInt("DAY", day);
         year = PlayerPrefs.GetInt("YEAR", year);
     }

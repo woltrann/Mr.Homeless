@@ -107,6 +107,19 @@ public class Casino : MonoBehaviour
     private int borc = 0;
     private int Odemegunu = -1;
 
+    [Header("Mülkiyet")]
+    public int[] sonParaGunu = new int[6]; // 6 mülkiyet için
+    public int[] hasilat = new int[6];
+    public int[] MulkUcretleri = { 50000, 150000, 250000, 350000, 400000, 1000000 };
+    public int[] MulkKazanclari = { 10000, 30000, 50000, 70000, 80000, 250000 };
+    public bool[] mulkAlindiMi = { false, false, false, false, false, false, };
+    public Text[] TutulduMu;
+    public GameObject MulkPaneli;
+    public TextMeshProUGUI bildirimText;
+    private int hasilatDegeri = 30;
+
+
+
     private void Awake()
     {
         instance = this;
@@ -114,6 +127,7 @@ public class Casino : MonoBehaviour
     private void Start()
     {
         LoadTefeciData();
+        LoadMulkler();
     }
 
     #region Rulet
@@ -763,7 +777,7 @@ public class Casino : MonoBehaviour
                 tefeciOdemeGunu = sayac;
                 Tefeci.text = "";
                 borc = tefeci * 2;
-                BorcMiktari.text = borc.ToString();
+                BorcMiktari.text = "BORÇ:" + borc.ToString();
                 TefecidenAldýMi = true;
                 Odemegunu = 30;
                 OdemeGunu.text = "30 Gün";
@@ -852,8 +866,11 @@ public class Casino : MonoBehaviour
             {
                 tefeciBorcTect.text = "Tefeciye olan borcun 2 katýna çýktý. 10 gün içinde ödemezsen sonun hiç iyi olmayacak!";
                 Odemegunu = 10;
+                borc +=borc;
                 PlayerPrefs.SetInt("ODEME_GUNU", Odemegunu);
+                PlayerPrefs.SetInt("BORC", borc);
                 OdemeGunu.text = Odemegunu + " Gün";
+                BorcMiktari.text = "BORÇ:" + borc.ToString();
                 tefeciPanelAcildi = true;
                 PlayerPrefs.SetInt("TEFECI_PANEL_ACILDI", 1);
                 BildirimPaneli.SetActive(true);
@@ -881,6 +898,99 @@ public class Casino : MonoBehaviour
     }
     #endregion
 
+    #region Hasýlat
+    public void MulkSatinAl(int mulk)
+    {
+        if (mulkAlindiMi[mulk])
+        {
+            Bildirim("Bu mülkiyete zaten sahipsin");
+            return;
+        }
+
+        int ucret = MulkUcretleri[mulk];
+
+        if (CharacterStats.Instance.money < ucret)
+        {
+            Bildirim("Bu mülkiyet için paran yetersiz");
+            return;
+        }
+
+        mulkAlindiMi[mulk] = true;
+        CharacterStats.Instance.AddMoney(-ucret);
+
+        hasilat[mulk] = hasilatDegeri;
+        sonParaGunu[mulk] = sayac;
+
+        PlayerPrefs.SetInt("MULK_" + mulk, 1);
+        PlayerPrefs.SetInt("HASILAT_" + mulk, hasilat[mulk]);
+        PlayerPrefs.SetInt("SON_GUN_" + mulk, sonParaGunu[mulk]);
+
+        PlayerPrefs.Save();
+
+        UpdateMulkUI(mulk);
+        Bildirim("Mülk Satýn Alýndý");
+    }
+
+    public void HasilatGunuGecti()
+    {
+        for (int i = 0; i < mulkAlindiMi.Length; i++)
+        {
+            if (!mulkAlindiMi[i]) continue;
+
+            hasilat[i]--;
+
+            if (hasilat[i] <= 0)
+            {
+                CharacterStats.Instance.AddMoney(MulkKazanclari[i]);
+                hasilat[i] = hasilatDegeri;
+                sonParaGunu[i] = sayac;
+            }
+
+            PlayerPrefs.SetInt("HASILAT_" + i, hasilat[i]);
+            PlayerPrefs.SetInt("SON_GUN_" + i, sonParaGunu[i]);
+
+            UpdateMulkUI(i);
+        }
+
+        PlayerPrefs.Save();
+    }
+
+    private void UpdateMulkUI(int i)
+    {
+        TutulduMu[i].text =
+            "<color=green>Satýn alýndý</color>\nÖdeme için " + hasilat[i] + " gün";
+    }
+    private void Bildirim(string mesaj)
+    {
+        bildirimText.text = mesaj;
+        MulkPaneli.SetActive(true);
+        StartCoroutine(BildirimGosterVeKapat());
+    }
+    public void LoadMulkler()
+    {
+        for (int i = 0; i < mulkAlindiMi.Length; i++)
+        {
+            mulkAlindiMi[i] = PlayerPrefs.GetInt("MULK_" + i, 0) == 1;
+            hasilat[i] = PlayerPrefs.GetInt("HASILAT_" + i, hasilatDegeri);
+            sonParaGunu[i] = PlayerPrefs.GetInt("SON_GUN_" + i, 0);
+
+            if (mulkAlindiMi[i])
+            {
+                UpdateMulkUI(i);
+            }
+            else
+            {
+                TutulduMu[i].text = "<color=red>Satýn alýnmadý</color>";
+            }
+        }
+    }
+
+    public IEnumerator BildirimGosterVeKapat()
+    {
+        yield return new WaitForSeconds(1f);
+        MulkPaneli.SetActive(false);
+    }
+    #endregion
 
     #region Panel Aç-Kapat
     public void Show()

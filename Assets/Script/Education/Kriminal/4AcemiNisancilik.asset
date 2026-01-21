@@ -15,6 +15,6 @@ MonoBehaviour:
   itemID: k4
   itemName: "Acemi Ni\u015Fanc\u0131l\u0131\u011F\u0131 \xD6\u011Fren"
   itemIcon: {fileID: 0}
-  price: 0
+  price: 15000
   statType: 2
-  statAmount: 0
+  statAmount: 250

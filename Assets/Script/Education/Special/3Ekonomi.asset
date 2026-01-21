@@ -15,6 +15,6 @@ MonoBehaviour:
   itemID: s3
   itemName: "Ekonomi \xD6\u011Fren"
   itemIcon: {fileID: 0}
-  price: 0
-  statType: 3
-  statAmount: 0
+  price: 10000
+  statType: 4
+  statAmount: 2
