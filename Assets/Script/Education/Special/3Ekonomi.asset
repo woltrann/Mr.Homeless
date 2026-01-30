@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: s3
   itemName: "Ekonomi \xD6\u011Fren"
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 507ebda1939e1d94ba93aa5860e135e6, type: 3}
   price: 10000
   statType: 4
   statAmount: 2

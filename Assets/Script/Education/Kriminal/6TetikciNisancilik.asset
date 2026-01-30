@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: k6
   itemName: "Tetik\xE7ili\u011Fi \xD6\u011Fren"
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 6dfd1ea84eb9cda469c66366dfe15226, type: 3}
   price: 150000
   statType: 2
   statAmount: 1000

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: c1
   itemName: "Ayakkab\u0131"
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 6aa9eeccf7ace2e47a32f8b7302bd615, type: 3}
   price: 75
   statType: 1
-  statAmount: 5
+  statAmount: 10

@@ -10,18 +10,18 @@ public class PurchaseManager : MonoBehaviour
         return PlayerPrefs.GetInt(GetKey(item), 0) == 1;
     }
 
-    public void TryPurchase(PurchaseItemData item)
+    public bool TryPurchase(PurchaseItemData item)
     {
         if (IsPurchased(item))
         {
             Debug.Log("Bu item zaten satýn alýndý");
-            return;
+            return false;
         }
 
         if (stats.money < item.price)
         {
             Debug.Log("Yetersiz para");
-            return;
+            return false;
         }
 
         stats.AddMoney(-item.price);
@@ -30,6 +30,8 @@ public class PurchaseManager : MonoBehaviour
         // SATIN ALINDI OLARAK KAYDET
         PlayerPrefs.SetInt(GetKey(item), 1);
         PlayerPrefs.Save();
+
+        return true;
     }
 
     private void ApplyItemEffect(PurchaseItemData item)

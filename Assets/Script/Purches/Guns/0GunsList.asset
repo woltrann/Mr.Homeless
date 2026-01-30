@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: 0GunsList
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemList
   items:
+  - {fileID: 11400000, guid: 7a8d41f4c8487c544811ccd1ee7b75bb, type: 2}
   - {fileID: 11400000, guid: ec98823ce8b580f4fba9ebbe2f1f7e4f, type: 2}
   - {fileID: 11400000, guid: c0cffe73f40a3a64e8f6151b1ae4c1dc, type: 2}
+  - {fileID: 11400000, guid: 28a5880b7fe2f624ea9330079aeac3fc, type: 2}
+  - {fileID: 11400000, guid: a3b4a59ba81778e4f91adcf548ffbf8f, type: 2}
+  - {fileID: 11400000, guid: 90f60068454ded74480f2fadc7a3a29c, type: 2}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: s5
   itemName: "\u0130\u015Fletme Belgesi Al"
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: b60e6e1c917806448be5904c4b126b05, type: 3}
   price: 100000
   statType: 4
   statAmount: 3

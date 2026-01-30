@@ -58,8 +58,13 @@ public class CharacterStats : MonoBehaviour
     #region Stats
     public void AddMoney(int amount)    // ----- MONEY -----
     {
-        amount += ((int)(amount * (moneyX / 10)));
+        if (amount > 0)
+        {
+            amount += ((int)(amount * (moneyX / 10)));
+        }
         money += amount;
+        money = Mathf.Max(0, money); 
+
         SaveStats();
         UpdateUI();
     }
@@ -122,12 +127,29 @@ public class CharacterStats : MonoBehaviour
     #region UI-Save-Load
     public void UpdateUI()    // ----- UI UPDATE -----
     {
-        moneyText.text = money.ToString() + "$";
+        moneyText.text = FormatMoney(money) + "$";
         hungerText.text = $"{hunger}/{maxHunger}";
         energyText.text = $"{energy}/{maxEnergy}";
 
         hungerSlider.value = hunger;
         energySlider.value = energy;
+    }
+    private string FormatMoney(int value)
+    {
+        if (value >= 1_000_000)
+        {
+            float m = value / 1_000_000f;
+            return m.ToString("0.0") + "M";
+        }
+        else if (value >= 10_000)
+        {
+            float k = value / 1_000f;
+            return k.ToString("0.0") + "k";
+        }
+        else
+        {
+            return value.ToString();
+        }
     }
 
     private void SaveStats()    // ----- SAVE -----

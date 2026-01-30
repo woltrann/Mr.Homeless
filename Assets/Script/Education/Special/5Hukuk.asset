@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: a4
   itemName: "Hukuk \xD6\u011Fren"
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 9d5c605eac1cd69479636c2e3083c684, type: 3}
   price: 500000
   statType: 4
   statAmount: 3

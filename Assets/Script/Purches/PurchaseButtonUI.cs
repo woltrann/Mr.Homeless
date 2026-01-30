@@ -35,8 +35,12 @@ public class PurchaseButtonUI : MonoBehaviour
 
     private void OnClick()
     {
-        purchaseManager.TryPurchase(itemData);
-        SetPurchasedState();
+        bool success = purchaseManager.TryPurchase(itemData);
+
+        if (success)
+        {
+            SetPurchasedState();
+        }
     }
 
     private void SetPurchasedState()

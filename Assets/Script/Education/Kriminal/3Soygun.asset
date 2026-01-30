@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: k3
   itemName: "Spygun Yapmay\u0131 \xD6\u011Fren"
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 032749da645443745b879d56a34244a3, type: 3}
   price: 10000
   statType: 2
   statAmount: 50

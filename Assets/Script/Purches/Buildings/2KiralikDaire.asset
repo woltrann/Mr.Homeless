@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: h2
   itemName: Daire Kirala
-  itemIcon: {fileID: 21300000, guid: 7d4fef4cfa42e1044bd8cd1393a4de9b, type: 3}
-  price: 40
+  itemIcon: {fileID: 21300000, guid: 30d7b9605feb6e24191a716e29c9aa3e, type: 3}
+  price: 650
   statType: 0
   statAmount: 20

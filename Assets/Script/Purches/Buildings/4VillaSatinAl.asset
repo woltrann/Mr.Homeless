@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: h4
   itemName: "Villa Sat\u0131n Al"
-  itemIcon: {fileID: 21300000, guid: a3bd8e338f0140a4fb7bbf33af2310de, type: 3}
-  price: 40
+  itemIcon: {fileID: 21300000, guid: e869ee4c7d466464c94b69e62181894e, type: 3}
+  price: 25000
   statType: 0
-  statAmount: 20
+  statAmount: 50

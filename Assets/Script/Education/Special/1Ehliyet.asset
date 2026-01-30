@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: s1
   itemName: "Ehliyet S\u0131nav\u0131na Gir"
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 322f1cbd34cdc574f99d17d3a07a4d36, type: 3}
   price: 1500
   statType: 4
   statAmount: 1

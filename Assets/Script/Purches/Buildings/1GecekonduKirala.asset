@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: h1
   itemName: Gece Kondu Kirala
-  itemIcon: {fileID: 21300000, guid: a3bd8e338f0140a4fb7bbf33af2310de, type: 3}
+  itemIcon: {fileID: 21300000, guid: 335fea9e4e2009449a507acda1fb225c, type: 3}
   price: 150
   statType: 0
   statAmount: 10

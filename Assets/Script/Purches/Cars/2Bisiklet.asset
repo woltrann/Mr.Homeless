@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: c2
   itemName: Bisiklet
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: de66b28f4cd55be4aa155d342cf2eaae, type: 3}
   price: 250
   statType: 1
-  statAmount: 15
+  statAmount: 20

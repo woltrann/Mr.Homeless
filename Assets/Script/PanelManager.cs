@@ -59,16 +59,7 @@ public class PanelManager : MonoBehaviour
         for (int i = 0; i < panels.Length; i++)
         {
             panels[i].SetActive(i == currentIndex);
-            if (currentIndex == 1 || currentIndex == 2)
-            {
-                healthBar.SetActive(true);
-                energyBar.SetActive(true);
-            }
-            else
-            {
-                healthBar.SetActive(false);
-                energyBar.SetActive(false);
-            }
+
             // Buton görseli
             var btnImage = buttons[i].GetComponent<Image>();
 

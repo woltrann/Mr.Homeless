@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: k1
   itemName: "Yankesicli\u011Fi \xD6\u011Fren"
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: a7389b41cb77c2c4a8489489d99e5d52, type: 3}
   price: 1000
   statType: 2
   statAmount: 5

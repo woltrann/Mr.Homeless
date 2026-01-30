@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: a4
   itemName: Master Yap
-  itemIcon: {fileID: 21300000, guid: d1e65668288543145a4f222ae2c5b7a7, type: 3}
+  itemIcon: {fileID: 21300000, guid: 10351ec4d4fcd8940ade89990596f82e, type: 3}
   price: 20000
   statType: 3
   statAmount: 250

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: k5
   itemName: "Usta Ni\u015Fanc\u0131l\u0131\u011F\u0131 \xD6\u011Fren"
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 48c9e08c85b9e764e8c341e273f9909a, type: 3}
   price: 50000
   statType: 2
   statAmount: 500

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: h5
   itemName: "Otel Sat\u0131n Al"
-  itemIcon: {fileID: 21300000, guid: 7b15b9a27212d0b4daec8abfbd908a6b, type: 3}
-  price: 40
+  itemIcon: {fileID: 21300000, guid: 138f5201bd9587b44a178780d9acb5c3, type: 3}
+  price: 100000
   statType: 0
-  statAmount: 20
+  statAmount: 80
