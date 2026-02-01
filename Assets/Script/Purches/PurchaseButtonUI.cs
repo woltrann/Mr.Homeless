@@ -12,6 +12,7 @@ public class PurchaseButtonUI : MonoBehaviour
 
     private PurchaseItemData itemData;
     private PurchaseManager purchaseManager;
+    public TMP_Text rentalDayText;
 
     public void Setup(PurchaseItemData data, PurchaseManager manager)
     {
@@ -31,6 +32,26 @@ public class PurchaseButtonUI : MonoBehaviour
             priceText.text = data.price + "$";
             button.onClick.AddListener(OnClick);
         }
+        if (purchaseManager.IsPurchased(data))
+        {
+            if (data.purchaseType == PurchaseType.Rental)
+            {
+                int endDay = PlayerPrefs.GetInt("RENT_END_" + data.itemID);
+                int currentDay = CharacterStats.Instance.day;
+                int dayLeft = Mathf.Max(0, endDay - currentDay);
+
+                rentalDayText.text = $"Kalan Gün: {dayLeft}";
+                rentalDayText.gameObject.SetActive(true);
+
+            }
+            else
+            {
+                rentalDayText.gameObject.SetActive(false);
+            }
+
+            SetPurchasedState();
+        }
+
     }
 
     private void OnClick()
@@ -39,6 +60,7 @@ public class PurchaseButtonUI : MonoBehaviour
 
         if (success)
         {
+            purchaseManager.purchaseUIBuilder.RebuildUI();
             SetPurchasedState();
         }
     }
@@ -57,6 +79,7 @@ public class PurchaseButtonUI : MonoBehaviour
             ItemStatType.MaxHunger => $"+{data.statAmount} Max Açlýk",
             ItemStatType.Power => $"+{data.statAmount} Güç",
             ItemStatType.Intellegent => $"+{data.statAmount} Zeka",
+            ItemStatType.MoneyBonus => $"+{data.statAmount} Para Bonusu",
             _ => ""
         };
     }

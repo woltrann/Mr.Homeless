@@ -16,6 +16,8 @@ MonoBehaviour:
   requiredHunger: -7
   requiredEnergy: -5
   rewardMoney: 3
+  requiredPower: 0
+  requiredIntellegent: 0
   requiredItemIDs:
-  - Bot
+  - c1
   passesTime: 1

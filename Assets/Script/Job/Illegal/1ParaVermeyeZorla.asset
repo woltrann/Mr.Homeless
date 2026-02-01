@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: 1ParaVermeyeZorla
   m_EditorClassIdentifier: Assembly-CSharp::JobData
   jobName: Para Vermeye Zorla
-  requiredHunger: 0
-  requiredEnergy: 0
-  rewardMoney: 0
-  requiredItemIDs: []
+  requiredHunger: -9
+  requiredEnergy: -5
+  rewardMoney: 10
+  requiredPower: 5
+  requiredIntellegent: 0
+  requiredItemIDs:
+  - c1
+  - g1
   passesTime: 1

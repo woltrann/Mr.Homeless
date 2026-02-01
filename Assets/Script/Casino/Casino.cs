@@ -777,10 +777,10 @@ public class Casino : MonoBehaviour
                 tefeciOdemeGunu = sayac;
                 Tefeci.text = "";
                 borc = tefeci * 2;
-                BorcMiktari.text = "BORÇ:" + borc.ToString();
+                BorcMiktari.text = "Borç: " + borc.ToString();
                 TefecidenAldýMi = true;
                 Odemegunu = 30;
-                OdemeGunu.text = "30 Gün";
+                OdemeGunu.text = "Ödeme Ýçin Kalan Gün: 30";
                 PlayerPrefs.SetInt("BORC", borc);
                 PlayerPrefs.SetInt("ODEME_GUNU", Odemegunu);
                 PlayerPrefs.SetInt("TEFECI_ODEME_GUNU", tefeciOdemeGunu);
@@ -812,11 +812,11 @@ public class Casino : MonoBehaviour
             TefeciBildirim.text = "Ýyi iþ çýkardýn. Borcunu zamanýnda ödedin, bu hoþuma gitti. Tekrar ihtiyacýn olursa bilirsin, buralardayým.";
             CharacterStats.Instance.AddMoney(-borc);
             borc = 0;
-            BorcMiktari.text = borc.ToString();
+            BorcMiktari.text = " ";
             PlayerPrefs.SetString("BorçMiktarý", BorcMiktari.text);
             tefeciOdemeGunu = -1;
             Odemegunu = 0;
-            OdemeGunu.text = Odemegunu.ToString();
+            OdemeGunu.text = " ";
             tefeciPanelAcildi = false;
             TefecidenAldýMi = false;
             PlayerPrefs.SetInt("BORC", 0);
@@ -842,8 +842,8 @@ public class Casino : MonoBehaviour
         TefecidenAldýMi = PlayerPrefs.GetInt("TEFECIDEN_ALDI_MI", 0) == 1;
         tefeciPanelAcildi = PlayerPrefs.GetInt("TEFECI_PANEL_ACILDI", 0) == 1;
 
-        BorcMiktari.text = borc.ToString();
-        OdemeGunu.text = Odemegunu > 0 ? Odemegunu + " Gün" : "0";
+        BorcMiktari.text = Odemegunu > 0 ? "Borç: " + borc.ToString() : " ";
+        OdemeGunu.text = Odemegunu > 0 ? "Ödeme Ýçin Kalan Gün: " + Odemegunu : " ";
 
         if (TefecidenAldýMi)
         {
@@ -856,7 +856,7 @@ public class Casino : MonoBehaviour
             return;
 
         Odemegunu--;
-        OdemeGunu.text = Odemegunu + " Gün";
+        OdemeGunu.text ="Ödeme Ýçin Kalan Gün: " + Odemegunu ;
 
         PlayerPrefs.SetInt("ODEME_GUNU", Odemegunu);
 
@@ -869,8 +869,8 @@ public class Casino : MonoBehaviour
                 borc +=borc;
                 PlayerPrefs.SetInt("ODEME_GUNU", Odemegunu);
                 PlayerPrefs.SetInt("BORC", borc);
-                OdemeGunu.text = Odemegunu + " Gün";
-                BorcMiktari.text = "BORÇ:" + borc.ToString();
+                OdemeGunu.text = "Ödeme Ýçin Kalan Gün: " + Odemegunu;
+                BorcMiktari.text = "Borç: " + borc.ToString();
                 tefeciPanelAcildi = true;
                 PlayerPrefs.SetInt("TEFECI_PANEL_ACILDI", 1);
                 BildirimPaneli.SetActive(true);

@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: 8CeteyiHaracaBagla
   m_EditorClassIdentifier: Assembly-CSharp::JobData
   jobName: "\xC7eteyi Haraca Ba\u011Fla"
-  requiredHunger: 0
-  requiredEnergy: 0
-  rewardMoney: 0
-  requiredItemIDs: []
+  requiredHunger: -75
+  requiredEnergy: -90
+  rewardMoney: 4000
+  requiredPower: 720
+  requiredIntellegent: 0
+  requiredItemIDs:
+  - k4
+  - h4
+  - c4
+  - g5
   passesTime: 1

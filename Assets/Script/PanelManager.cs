@@ -23,10 +23,6 @@ public class PanelManager : MonoBehaviour
     public Color selectedColor = Color.white;
     public Color normalColor = new Color(1, 1, 1, 0.5f);
 
-    [Header("Character Panel Animation")]
-    public RectTransform panel;
-    private bool isOpen = false;
-
     private int currentIndex = 0;
 
     private void Awake()
@@ -79,30 +75,9 @@ public class PanelManager : MonoBehaviour
         {
             otherPanel[i].SetActive(false);        
         }
-        if (isOpen)
-        {
-            CharacterPanel();        
-        }
 
     }
 
-    public void CharacterPanel()
-    {
-        if (isOpen)
-        {
-            // Kapanýþ animasyonu
-            panel.DOScale(Vector3.zero, 0.3f)
-                 .SetEase(Ease.InBack);
-        }
-        else
-        {
-            // Açýlýþ animasyonu
-            panel.DOScale(Vector3.one, 0.3f)
-                 .SetEase(Ease.OutBack);
-        }
-
-        isOpen = !isOpen;
-    }
     public void LegalJobPanel() => otherPanel[0].SetActive(!otherPanel[0].activeSelf);
     public void IllegalJobPanel() => otherPanel[1].SetActive(!otherPanel[1].activeSelf);
     public void HungerPanel()

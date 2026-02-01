@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: 9KiralikKatilOl
   m_EditorClassIdentifier: Assembly-CSharp::JobData
   jobName: "Kiral\u0131k Katil Ol"
-  requiredHunger: 0
-  requiredEnergy: 0
-  rewardMoney: 0
-  requiredItemIDs: []
+  requiredHunger: -100
+  requiredEnergy: -100
+  rewardMoney: 10000
+  requiredPower: 1200
+  requiredIntellegent: 0
+  requiredItemIDs:
+  - k5
+  - h4
+  - c5
+  - g5
   passesTime: 1

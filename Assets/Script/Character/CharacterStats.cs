@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class CharacterStats : MonoBehaviour
 {
     public static CharacterStats Instance;
+    public PurchaseUIBuilder purchaseUIBuilder;
     [Header("Stats")]
     public int money;
     public int hunger;
@@ -20,6 +21,7 @@ public class CharacterStats : MonoBehaviour
     public TMP_Text moneyText;
     public TMP_Text hungerText;
     public TMP_Text energyText;
+    public TMP_Text powerText;
     public Slider hungerSlider;
     public Slider energySlider;
 
@@ -54,6 +56,9 @@ public class CharacterStats : MonoBehaviour
         timeText.text = $"Gün: {day} \nYaþ: {year}";
         Casino.instance.GunIlerle();
         Casino.instance.HasilatGunuGecti();
+        PurchaseManager.instance.CheckRentalExpirations();
+        purchaseUIBuilder.RebuildUI();
+
     }
     #region Stats
     public void AddMoney(int amount)    // ----- MONEY -----
@@ -130,6 +135,7 @@ public class CharacterStats : MonoBehaviour
         moneyText.text = FormatMoney(money) + "$";
         hungerText.text = $"{hunger}/{maxHunger}";
         energyText.text = $"{energy}/{maxEnergy}";
+        powerText.text = $"Güç: {power} \nZeka: {intellegent}";
 
         hungerSlider.value = hunger;
         energySlider.value = energy;

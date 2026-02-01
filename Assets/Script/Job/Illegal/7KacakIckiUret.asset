@@ -13,8 +13,15 @@ MonoBehaviour:
   m_Name: 7KacakIckiUret
   m_EditorClassIdentifier: Assembly-CSharp::JobData
   jobName: "Ka\xE7ak\xE7\u0131l\u0131k Yap"
-  requiredHunger: 0
-  requiredEnergy: 0
-  rewardMoney: 0
-  requiredItemIDs: []
+  requiredHunger: -55
+  requiredEnergy: -65
+  rewardMoney: 1000
+  requiredPower: 240
+  requiredIntellegent: 0
+  requiredItemIDs:
+  - s1
+  - k3
+  - h3
+  - c4
+  - g4
   passesTime: 1

@@ -15,6 +15,9 @@ MonoBehaviour:
   itemID: g6
   itemName: Bazuka
   itemIcon: {fileID: 21300000, guid: b3afafdc61bb3f24ca7cba758fa2ded4, type: 3}
-  price: 400
+  price: 30000
   statType: 2
   statAmount: 500
+  purchaseType: 0
+  rentalDays: 30
+  category: 3

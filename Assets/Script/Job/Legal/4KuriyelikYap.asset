@@ -17,6 +17,8 @@ MonoBehaviour:
   requiredEnergy: -10
   rewardMoney: 10
   requiredPower: 0
-  requiredIntellegent: 10
-  requiredItemIDs: []
+  requiredIntellegent: 0
+  requiredItemIDs:
+  - h1
+  - c3
   passesTime: 1

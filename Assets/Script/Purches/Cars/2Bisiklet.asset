@@ -18,3 +18,7 @@ MonoBehaviour:
   price: 250
   statType: 1
   statAmount: 20
+  purchaseType: 0
+  rentalDays: 30
+  category: 1
+  level: 2

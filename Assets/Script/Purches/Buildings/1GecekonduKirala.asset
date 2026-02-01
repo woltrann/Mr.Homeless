@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: 1GecekonduKirala
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: h1
-  itemName: Gece Kondu Kirala
+  itemName: "Kiral\u0131k Gecekondu"
   itemIcon: {fileID: 21300000, guid: 335fea9e4e2009449a507acda1fb225c, type: 3}
   price: 150
   statType: 0
   statAmount: 10
+  purchaseType: 1
+  rentalDays: 30
+  category: 0
+  level: 1

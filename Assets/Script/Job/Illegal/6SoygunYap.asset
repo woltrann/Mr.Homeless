@@ -13,8 +13,15 @@ MonoBehaviour:
   m_Name: 6SoygunYap
   m_EditorClassIdentifier: Assembly-CSharp::JobData
   jobName: Soygun Yap
-  requiredHunger: 0
-  requiredEnergy: 0
-  rewardMoney: 0
-  requiredItemIDs: []
+  requiredHunger: -40
+  requiredEnergy: -40
+  rewardMoney: 250
+  requiredPower: 200
+  requiredIntellegent: 0
+  requiredItemIDs:
+  - s1
+  - k3
+  - h2
+  - c4
+  - g4
   passesTime: 1

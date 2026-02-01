@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: 4HirsizlikYap
   m_EditorClassIdentifier: Assembly-CSharp::JobData
   jobName: "H\u0131rs\u0131zl\u0131k Yap"
-  requiredHunger: 0
-  requiredEnergy: 0
-  rewardMoney: 0
-  requiredItemIDs: []
+  requiredHunger: -15
+  requiredEnergy: -25
+  rewardMoney: 50
+  requiredPower: 90
+  requiredIntellegent: 0
+  requiredItemIDs:
+  - k2
+  - h1
+  - c3
+  - g3
   passesTime: 1

@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: 2KiralikDaire
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: h2
-  itemName: Daire Kirala
+  itemName: "Kiral\u0131k Daire"
   itemIcon: {fileID: 21300000, guid: 30d7b9605feb6e24191a716e29c9aa3e, type: 3}
   price: 650
   statType: 0
   statAmount: 20
+  purchaseType: 1
+  rentalDays: 30
+  category: 0
+  level: 2

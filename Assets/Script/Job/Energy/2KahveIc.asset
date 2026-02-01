@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: 2KahveIc
   m_EditorClassIdentifier: Assembly-CSharp::JobData
   jobName: "Kahve i\xE7"
-  requiredHunger: 0
-  requiredEnergy: 10
+  requiredHunger: 100
+  requiredEnergy: 100
   rewardMoney: -5
+  requiredPower: 0
+  requiredIntellegent: 0
+  requiredItemIDs: []
+  passesTime: 0

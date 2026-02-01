@@ -15,6 +15,9 @@ MonoBehaviour:
   itemID: g5
   itemName: AK-47
   itemIcon: {fileID: 21300000, guid: 3b68e960921d53344ba6eb628c61f31b, type: 3}
-  price: 400
+  price: 6000
   statType: 2
   statAmount: 250
+  purchaseType: 0
+  rentalDays: 30
+  category: 3

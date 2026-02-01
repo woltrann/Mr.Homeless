@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: 10BankaSoy
   m_EditorClassIdentifier: Assembly-CSharp::JobData
   jobName: Banka Soy
-  requiredHunger: 0
-  requiredEnergy: 0
-  rewardMoney: 0
-  requiredItemIDs: []
+  requiredHunger: -200
+  requiredEnergy: -200
+  rewardMoney: 50000
+  requiredPower: 2700
+  requiredIntellegent: 1000
+  requiredItemIDs:
+  - k6
+  - h5
+  - c6
+  - g6
   passesTime: 1

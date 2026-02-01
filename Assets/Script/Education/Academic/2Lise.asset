@@ -17,4 +17,8 @@ MonoBehaviour:
   itemIcon: {fileID: 5084793754198756129, guid: 470abe78e4b1d7e4c903a05ad3b62c67, type: 3}
   price: 2000
   statType: 3
-  statAmount: 15
+  statAmount: 100
+  purchaseType: 0
+  rentalDays: 30
+  category: 2
+  level: 2

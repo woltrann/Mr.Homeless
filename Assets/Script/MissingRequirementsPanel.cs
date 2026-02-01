@@ -14,7 +14,7 @@ public class MissingRequirementsPanel : MonoBehaviour
     {
         panel.SetActive(true);
 
-        requirementsText.text = "Ýhtiyaç Listesi:\n";
+        requirementsText.text = "<u>Ýhtiyaç Listesi:</u>\n";
 
         foreach (var item in missingItems)
         {

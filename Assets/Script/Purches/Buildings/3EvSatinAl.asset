@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: 3EvSatinAl
   m_EditorClassIdentifier: Assembly-CSharp::PurchaseItemData
   itemID: h3
-  itemName: "Ev Sat\u0131n Al"
+  itemName: Ev
   itemIcon: {fileID: 21300000, guid: 61fb3a5f778453142ae298f3cd4ea670, type: 3}
   price: 5000
   statType: 0
   statAmount: 40
+  purchaseType: 0
+  rentalDays: 30
+  category: 0
+  level: 3

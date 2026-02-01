@@ -10,13 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 460321700be67434ca432b131f20f4ae, type: 3}
-  m_Name: 7SatisTemsilciliYap
+  m_Name: 7FiubydeCalis
   m_EditorClassIdentifier: Assembly-CSharp::JobData
   jobName: "Fiuby'de \xC7al\u0131\u015F"
   requiredHunger: -25
   requiredEnergy: -25
   rewardMoney: 500
   requiredPower: 0
-  requiredIntellegent: 150
-  requiredItemIDs: []
+  requiredIntellegent: 250
+  requiredItemIDs:
+  - a3
+  - s2
+  - h2
+  - c4
   passesTime: 1

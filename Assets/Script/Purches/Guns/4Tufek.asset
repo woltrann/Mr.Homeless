@@ -15,6 +15,9 @@ MonoBehaviour:
   itemID: g4
   itemName: "T\xFCfek"
   itemIcon: {fileID: 21300000, guid: b660b26768de4d0409e2ef4d3b1b451a, type: 3}
-  price: 400
+  price: 2500
   statType: 2
   statAmount: 100
+  purchaseType: 0
+  rentalDays: 30
+  category: 3

@@ -13,8 +13,15 @@ MonoBehaviour:
   m_Name: "5Araba\xC7al"
   m_EditorClassIdentifier: Assembly-CSharp::JobData
   jobName: "Araba \xC7al"
-  requiredHunger: 0
-  requiredEnergy: 0
-  rewardMoney: 0
-  requiredItemIDs: []
+  requiredHunger: -20
+  requiredEnergy: -30
+  rewardMoney: 150
+  requiredPower: 90
+  requiredIntellegent: 0
+  requiredItemIDs:
+  - s1
+  - k2
+  - h1
+  - c3
+  - g3
   passesTime: 1

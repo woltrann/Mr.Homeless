@@ -21,4 +21,13 @@ public class PurchaseUIBuilder : MonoBehaviour
             obj.GetComponent<PurchaseButtonUI>().Setup(item, purchaseManager);
         }
     }
+    public void RebuildUI()
+    {
+        foreach (Transform child in content)
+        {
+            Destroy(child.gameObject);
+        }
+
+        BuildUI();
+    }
 }

@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: 3KacakSigaraSat
   m_EditorClassIdentifier: Assembly-CSharp::JobData
   jobName: "Ka\xE7ak Sigara Sat"
-  requiredHunger: 0
-  requiredEnergy: 0
-  rewardMoney: 0
-  requiredItemIDs: []
+  requiredHunger: -15
+  requiredEnergy: -20
+  rewardMoney: 40
+  requiredPower: 25
+  requiredIntellegent: 0
+  requiredItemIDs:
+  - h1
+  - c2
+  - g2
   passesTime: 1
